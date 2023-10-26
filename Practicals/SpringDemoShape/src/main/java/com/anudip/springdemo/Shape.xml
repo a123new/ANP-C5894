@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+Circle
+Rectangle
+Painter
+
+<bean id="cir" class="com.anudip.springdemo.Circle">
+<constructor-arg value="red"> </constructor-arg>
+</bean>
+
+<bean id="rect" class="com.anudip.springdemo.Rectangle">
+<property name="color" value="Green"></property>
+</bean>
+
+<bean id="sami" class="com.anudip.springdemo.Painter">
+<constructor-arg ref="cir"></constructor-arg>
+</bean>
+
+<bean id="rutik" class="coom.anudip.springdemo.Singer">
+<constructor-arg ref="rect"></constructor-arg>
+</bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
