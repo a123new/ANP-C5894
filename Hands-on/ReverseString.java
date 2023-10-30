@@ -1,36 +1,27 @@
-package LabQuestions;
+package String;
 
-//Lab1: How to reverse string in java
-
+//program for reverse string using StringBuffer class.
 import java.util.Scanner;
 
-public class ReverseString
+public class ReverseString 
 {
-public static void main(String[] args) 
-	{
-	 //create scanner class
-      Scanner Sc = new Scanner(System.in);
+  public static void main(String[] args) 
+  {
+      Scanner scanner = new Scanner(System.in);
       
-      //to prompt the user to enter a string
-      System.out.println("Enter a String :" );
-      String input = Sc.nextLine();
-     
-      String reversed = ReverseString1(input);
+      System.out.print("Enter a string: ");
+      String input = scanner.nextLine();
       
-      System.out.println("Reversed String:" + reversed);
+      String reversed = reverseString(input);
       
-      //close the scanner class
-      Sc.close();
-     
+      System.out.println("Reversed string: " + reversed);
+      
+      scanner.close();
+  }
+  
+  public static String reverseString(String str) 
+  {
+      StringBuffer reversed = new StringBuffer(str).reverse();
+      return reversed.toString();
+  }
 }
-
-//create reverse string instance
-public static String ReverseString1(String str) 
-{
-	StringBuffer reversed = new StringBuffer(str).reverse();
-	
-	return reversed.toString();
-
-}
-}
-
